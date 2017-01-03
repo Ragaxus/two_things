@@ -1,0 +1,39 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Two Things</title>
+    <link rel="stylesheet" href="styles.css">
+    
+
+    
+     <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+    <script src="popup.js"></script>
+    
+  </head>
+  <body>
+    <div id="headerBar">
+        <div id="status"></div>
+    </div>
+    <!-- Good/important rounded switch -->
+    <div id="isImportant">
+        <b>Good</b>
+        <label class="switch">
+            <input type="checkbox">
+            <div class="slider round"></div>
+        </label>
+        <b>Important</b>
+    </div>
+    <div id="froala" name="content"></div>
+  </body>
+</html>
+
